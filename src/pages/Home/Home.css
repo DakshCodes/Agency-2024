@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 @font-face {
     font-family: Moment;
     src: url('../../assets/MonumentExtended-Regular.otf');
@@ -8,8 +10,6 @@
     font-family: Dahlia;
     src: url('../../assets/Dahlia.otf');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 * {
     margin: 0;
@@ -65,8 +65,9 @@
     /* text-transform: uppercase; */
     color: #3e4e09;
     padding: 0.2rem 0em;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Michroma', sans-serif;
+
 }
 
 
@@ -231,7 +232,7 @@
 
 
 .copy p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 600;
     line-height: 1.5;
     color: #3e4e09;
@@ -262,7 +263,7 @@
     padding: 0.5em 0.9em;
     border-radius: 20px;
     font-family: Moment;
-    font-size: 1.3vmax;
+    font-size: 1.2vmax;
     font-weight: 600;
     display: flex;
     align-items: center;
