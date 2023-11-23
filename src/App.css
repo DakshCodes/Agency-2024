@@ -51,10 +51,11 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   flex: 4;
-  background-image: url(https://i.pinimg.com/736x/e3/fe/42/e3fe425aec922b07c26e8ef189997c88.jpg);
+  /* background-image: url(https://i.pinimg.com/736x/e3/fe/42/e3fe425aec922b07c26e8ef189997c88.jpg); */
+  background-image: url(https://i.pinimg.com/564x/8a/52/f6/8a52f64ef61d66cccf57a489f40b0225.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   color: #fff;
   border-radius: 10px;
   padding: .25rem;
