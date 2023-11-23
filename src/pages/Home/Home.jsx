@@ -9,38 +9,42 @@ const Home = () => {
     useLayoutEffect(() => {
 
         // set effects
-        gsap.set(".nav-logo, .nav-links a", {
+        gsap.set(".nav-logo", {
+            x: -40,
+            opacity: 0,
+        })
+        gsap.set(".nav-links a", {
             top: "30px",
             opacity: 0,
         })
-        gsap.set("h1",{
+        gsap.set("h1", {
             opacity: 0,
             y: 60,
         });
 
-        gsap.set(".play-wrapper, .pattern, .copy",{
+        gsap.set(".play-wrapper, .pattern, .copy", {
             scaleY: 0,
         });
 
-        gsap.from(".hr",{
+        gsap.from(".hr", {
             width: 0,
         });
 
-        gsap.set(".btns",{
+        gsap.set(".btns", {
             x: 50,
             opacity: 0,
         });
 
-        
-        gsap.set(".play-btn",{
+
+        gsap.set(".play-btn", {
             scale: 0,
         });
 
-        gsap.set(".hero-wrapper",{
+        gsap.set(".hero-wrapper", {
             width: "100%",
         });
 
-        gsap.set(".arrow",{
+        gsap.set(".arrow", {
             scale: "0",
         });
         gsap.set(".marquee", {
@@ -48,13 +52,18 @@ const Home = () => {
         });
         // animate
 
-        gsap.to(".nav-logo, .nav-links a", 2, {
+        gsap.to(".nav-logo", 2, {
+            x: 0,
+            opacity: 1,
+            ease: "power4.inOut",
+        })
+        gsap.to(".nav-links a", 0.9, {
             top: "0px",
             opacity: 1,
             ease: "power4.inOut",
-            delay: 0.3,
+            delay: 0.6,
             stagger: {
-                amount: 0.3,
+                amount: 0.4,
             }
         })
 
@@ -101,12 +110,12 @@ const Home = () => {
             delay: 3,
         });
 
-        gsap.to(".arrow",{
+        gsap.to(".arrow", {
             scale: 1,
             ease: "power3.inOut",
             delay: 3,
         });
-        gsap.to(".marquee",{
+        gsap.to(".marquee", {
             bottom: "0rem",
             ease: "power3.inOut",
             delay: 4,
@@ -118,15 +127,6 @@ const Home = () => {
     return (
         <>
             <div className="main-Home">
-                <div className="nav">
-                    <div className="nav-logo">ValueX</div>
-                    <div className="nav-links">
-                        <a href=" #">About us</a>
-                        <a href="#">Projects</a>
-                        <a href="#">Services</a>
-                        <a href="#">Let's Talk</a>
-                    </div>
-                </div>
                 <div className="header">
                     <div className="header-left col">
                         <div className="item">
@@ -134,7 +134,7 @@ const Home = () => {
                                 <div className='circle-head'></div>
                                 <div className='circle-head'></div>
                             </h1>
-                            <h1>Digitize</h1>
+                            <h1 data-lenis-prevent-wheel>Digitize</h1>
                             <h1> Ideas </h1>
                         </div>
                     </div>
