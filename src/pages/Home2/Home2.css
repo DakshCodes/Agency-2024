@@ -17,37 +17,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #171717;
 }
 
 .main-head h1 {
     position: relative;
     font-family: Moment;
     text-transform: uppercase;
-    font-size: 4.5vmax;
+    font-size: 3.7vmax;
     color: #fff;
     font-weight: 100;
     width: max-content;
     word-spacing: -24px;
     display: flex;
+    
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
-.main-head .dot {
-    content: '';
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #d5ff3f;
+.main-head h1 svg{
+    rotate: 90deg;
 }
+
 
 
 .main-head p {
     font-family: 'Michroma', sans-serif;
-    font-size: 1.2vmax;
-    width: 550px;
+    font-size: 1.4vmax;
+    width: 650px;
     color: #535353;
+    font-weight: 600;
 }
 
 @media (max-width:1100px) {
