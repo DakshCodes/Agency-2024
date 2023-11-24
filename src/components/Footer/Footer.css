@@ -26,7 +26,33 @@
     width: 100%;
     padding: 0 20px;
     justify-content: center;
+    flex-direction: column;
+    background-image: url(https://i.pinimg.com/564x/76/9b/11/769b11b616355d8c9e9203194bfb331a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }
+
+
+.footer-head {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+
+.footer-head h1 {
+    position: relative;
+    font-family: Moment;
+    text-transform: uppercase;
+    font-size: 5vmax;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+}
+
 
 .footer-logo {
     font-family: Moment;

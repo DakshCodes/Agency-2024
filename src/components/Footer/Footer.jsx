@@ -5,8 +5,13 @@ const Footer = () => {
     return (
         <>
             <footer className="footer">
-                <video className="footer_video" muted loop autoPlay src="//cdn.shopify.com/s/files/1/0526/6905/5172/t/5/assets/footer.mp4?v=29581141968431347981633714450" type="video/mp4">
-                </video>
+                {/* <video className="footer_video" muted loop autoPlay src="//cdn.shopify.com/s/files/1/0526/6905/5172/t/5/assets/footer.mp4?v=29581141968431347981633714450" type="video/mp4">
+                </video> */}
+                <div className="footer-head">
+                    <h1>
+                        Ready to Grow ?
+                    </h1>
+                </div>
                 <div className="main-footer">
                     <div class="bg-[#fff] rounded-3xl mt-4 mx-auto container pb-28 py-10 xl:px-24 lg:px-12 sm:px-6 px-4">
                         <div class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-12 gap-10 ">
