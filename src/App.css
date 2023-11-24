@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.moment{
+  font-family: Moment;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  background-color: #000;
+}
+
+.michroma{
+  font-family: 'Michroma', sans-serif;
+}
+
+.urban{
+  font-family: 'Urbanist', sans-serif;
+}
+
 :root {
   --transparent-background: rgba(4, 4, 4, 0.899);
   --main-nav-bg: #313131;

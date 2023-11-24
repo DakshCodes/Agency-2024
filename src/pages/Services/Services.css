@@ -1,0 +1,33 @@
+.left-side{
+    content: " ";
+    background-color: #d4ff3f;
+    border-top-left-radius:  2rem ;
+    border-bottom-left-radius:  2rem ;
+}
+.right-side{
+    content: " ";
+    background-color: #d4ff3f;
+    border-top-right-radius:  2rem ;
+    border-bottom-right-radius:  2rem ;
+    border: none;
+    /* border: 2px solid green; */
+}
+
+.triangle{
+    /* background-color: aqua; */
+    height: 100px;
+    width: 120px;
+    content: "";
+    position: absolute;
+    left: 30.9%;
+    top: -1.07rem;
+    border-bottom: 100px solid #d4ff3f;
+    border-left: 100px solid transparent;
+    transform: rotate(20deg);
+}
+
+.triangle::after{
+    content: "";
+    z-index: 5000000;
+    background-color: aqua;
+}
