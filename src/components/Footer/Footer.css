@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+    --light: #fff;
+    --dark: #000;
+}
+
+
+.footer_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    border: none;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-family: Moment;
+    font-size: 1.8rem;
+}
+
+.main-footer {
+    z-index: 1;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+.main-footer p {
+    font-family: 'Michroma', sans-serif;
+}
+
+.main-footer h2 {
+    font-family: Moment;
+}
+
+.main-footer a {
+    font-family: 'Michroma', sans-serif;
+}
+
+.main-footer label{
+    font-family: Moment;
+    
+}
+.main-footer input{
+    font-family: 'Michroma', sans-serif;
+    
+}

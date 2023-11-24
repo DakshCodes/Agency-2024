@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Landing from './pages/Landing/Landing'
 import Lenis from '@studio-freight/lenis'
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
@@ -41,8 +42,6 @@ function App() {
         <div className="nav-logo">ValueX</div>
         <div className="nav-links">
           <a href="#about">About us</a>
-          <a href="#projects">Projects</a>
-          <a href="#services">Services</a>
           <a href="#talk">Contact</a>
         </div>
       </div>
@@ -51,13 +50,11 @@ function App() {
         <div className="section-links">
           <div className="bottom-nav-link">Home</div>
           <div className="bottom-nav-link">About</div>
-          <div className="bottom-nav-link">Services</div>
           <div className="bottom-nav-link">Contact</div>
         </div>
       </div>
-
-
       <Landing />
+      <Footer />
     </>
   )
 }

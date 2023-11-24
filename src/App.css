@@ -5,6 +5,10 @@
 
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +29,7 @@ body::-webkit-scrollbar {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 600px;
+  max-width: 400px;
   /* Adjust max-width as needed */
   height: 80px;
   /* Adjust height as needed */
@@ -55,7 +59,7 @@ body::-webkit-scrollbar {
   background-image: url(https://i.pinimg.com/564x/8a/52/f6/8a52f64ef61d66cccf57a489f40b0225.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   color: #fff;
   border-radius: 10px;
   padding: .25rem;
@@ -80,7 +84,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex: 1;
-  font-size: 2vmin;
+  font-size: 2.4vmin;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
 }
 
@@ -93,7 +97,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex: 1;
-    font-size: 3vmin;
+    font-size: 3.9vmin;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   }
 }
