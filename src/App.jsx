@@ -43,7 +43,7 @@ function App() {
           <a href="#about">About us</a>
           <a href="#projects">Projects</a>
           <a href="#services">Services</a>
-          <a href="#talk">Let's Talk</a>
+          <a href="#talk">Contact</a>
         </div>
       </div>
       {/* nav-2 */}
@@ -52,7 +52,7 @@ function App() {
           <div className="bottom-nav-link">Home</div>
           <div className="bottom-nav-link">About</div>
           <div className="bottom-nav-link">Services</div>
-          <div className="bottom-nav-link">Let's Talk</div>
+          <div className="bottom-nav-link">Contact</div>
         </div>
       </div>
 

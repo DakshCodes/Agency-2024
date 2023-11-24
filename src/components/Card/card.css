@@ -1,0 +1,56 @@
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.cardContainer .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -25%;
+  height: 45vmax;
+  width: 100vmax;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transform-origin: top;
+}
+
+.cardContainer .card h2 {
+  text-align: center;
+  margin: 0px;
+  font-size: 4vmax;
+  /* color: #fff; */
+  color: #d5ff3f;
+  /* color: #000; */
+  font-family: Moment;
+}
+
+.cardContainer .card .body {
+  display: flex;
+  height: 100%;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.cardContainer .card .body .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.cardContainer .card .body .imageContainer .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.cardContainer .card .body .imageContainer img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
