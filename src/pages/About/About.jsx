@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.css';
 import { motion } from 'framer-motion'
 import aboutvideo from '../../assets/about.mp4'
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <div className='main-about'>
             <motion.div
