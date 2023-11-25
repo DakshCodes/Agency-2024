@@ -1,4 +1,5 @@
 import React from 'react'
+import Featured from '../Featured/Featured'
 import Home from '../Home/Home'
 import Home2 from '../Home2/Home2'
 import Pricing from "../Pricing/Pricing"
@@ -9,6 +10,7 @@ const Landing = () => {
         <>
             <Home />
             <Home2 />
+            <Featured />
             <Services />
             <Pricing />
 

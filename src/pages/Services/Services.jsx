@@ -3,7 +3,7 @@ import "../../App.css";
 import "./Services.css"
 
 import SingleServiceCard from './SingleServiceCard';
-
+import { motion } from 'framer-motion'
 const Services = () => {
   return (
     <main className=' lg:h-fit lg:pb-[20rem]  bg-[#000] py-16 my-20 '>
@@ -13,9 +13,18 @@ const Services = () => {
           {/* left div */}
           <div className='w-fit h-fit z-50 lg:w-[40%] lg:h-[22rem] p-8 left-side flex flex-col'>
             <div className='text-5xl flex flex-wrap items-center gap-4 break-words font-semibold moment'>
-              <p>Services</p>
+              <motion.p
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "backOut" }}
+                viewport={{ once: true }}
+              >Services</motion.p>
               <div className='rotate-45'>
-                <svg
+                <motion.svg
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, ease: "backOut" }}
+                  viewport={{ once: true }}
                   width="80"
                   height="50"
                   viewBox="0 0 21 17"
@@ -30,11 +39,16 @@ const Services = () => {
                     test="grey"
                     style={{ fill: 'black' }} // Set the color to white
                   ></path>
-                </svg>
+                </motion.svg>
               </div>
             </div>
 
-            <p className='michroma break-words block font-semibold lg:hidden mt-4'>At ValueXLabs, we specialize in custom web development solutions for businesses and enterprises. Elevate your online presence with our tailored services. Experience innovation that goes beyond expectations. Here is how we can assist you</p>
+            <p
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "backOut" }}
+              viewport={{ once: true }}
+              className='michroma break-words block font-semibold lg:hidden mt-4'>At ValueXLabs, we specialize in custom web development solutions for businesses and enterprises. Elevate your online presence with our tailored services. Experience innovation that goes beyond expectations. Here is how we can assist you</p>
           </div>
 
           {/* right div */}
@@ -42,11 +56,21 @@ const Services = () => {
           <div className='w-full  p-12 pt-24 hidden lg:block lg:w-[60%] h-[25rem] right-side '>
             <div className='flex items-center justify-center  gap-8 border-black'>
 
-              <p className='urban font-semibold text-justify '>
+              <motion.p
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "backOut" }}
+                viewport={{ once: true }}
+                className='urban font-semibold text-justify '>
                 At ValueXLabs, we specialize in custom web development solutions for businesses and enterprises. Elevate your online presence with our tailored services. Experience innovation that goes beyond expectations. Here is how we can assist you
-              </p>
+              </motion.p>
 
-              <button className='my-4 urban border-[1.8px] px-4 py-1  border-black w-[4rem] rounded-full min-w-fit h-fit'>Get Started</button>
+              <motion.button
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "backOut" }}
+                viewport={{ once: true }}
+                className='my-4 urban border-[1.8px] px-4 py-1  border-black w-[4rem] rounded-full min-w-fit h-fit'>Get Started</motion.button>
             </div>
           </div>
 
@@ -54,12 +78,19 @@ const Services = () => {
 
 
         </div>
-        <div className='text-white  lg:absolute p-4 top-[25rem] md:top-[14rem] grid grid-cols-1 lg:grid-cols-3 gap-4  border-red-500'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1,}}
+          transition={{ duration: 1, ease: "backOut" }}
+          viewport={{ once: true }}
+          className='text-white  lg:absolute p-4 top-[25rem] md:top-[14rem] grid grid-cols-1 lg:grid-cols-3 gap-4  border-red-500'>
 
+          <SingleServiceCard
+
+          />
           <SingleServiceCard />
           <SingleServiceCard />
-          <SingleServiceCard />
-        </div>
+        </motion.div>
       </div>
     </main>
   )

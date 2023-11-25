@@ -3,6 +3,8 @@ import './App.css'
 import Landing from './pages/Landing/Landing'
 import Lenis from '@studio-freight/lenis'
 import Footer from './components/Footer/Footer';
+import { Routes, Route, Link } from 'react-router-dom'
+import About from './pages/About/ABout';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
@@ -39,21 +41,30 @@ function App() {
     <>
       {/* nav-1 */}
       <div className={`nav ${showBottomNav ? 'hide' : ''}`}>
-        <div className="nav-logo">ValueX</div>
+        <Link to={'/'}>
+          <div className="nav-logo">ValueX</div>
+        </Link>
         <div className="nav-links">
-          <a href="#about">About us</a>
-          <a href="#talk">Contact</a>
+          <Link to={"/about"}>About us</Link>
+          <Link to={"/contact"}>Contact</Link>
         </div>
       </div>
       {/* nav-2 */}
       <div className={`bottom-nav ${showBottomNav ? 'active' : ''}`}>
         <div className="section-links">
-          <div className="bottom-nav-link">Home</div>
-          <div className="bottom-nav-link">About</div>
-          <div className="bottom-nav-link">Contact</div>
+          <div className="bottom-nav-link"><Link to={'/'}>Home</Link></div>
+          <div className="bottom-nav-link"><Link to={'/about'}>About</Link></div>
+          <div className="bottom-nav-link"><Link to={'/contact'}>Contact</Link></div>
         </div>
       </div>
-      <Landing />
+
+      <Routes>
+
+        <Route path='/' element={<Landing />} />
+
+        <Route path='/about' element={<About />} />
+
+      </Routes>
       <Footer />
     </>
   )

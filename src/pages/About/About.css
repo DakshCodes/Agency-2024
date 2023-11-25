@@ -1,0 +1,356 @@
+.main-about {
+    position: relative;
+    height: max-content;
+    width: 100%;
+    background-color: #171717;
+    overflow: hidden;
+}
+
+/* marquee-2 */
+.marquee-2 {
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.6vmax 0;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 3;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    transform: rotate(3deg);
+}
+
+.marquee-2 span {
+    gap: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    font-family: Moment;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+    mix-blend-mode: normal important;
+    font-size: 2.5vmax;
+    text-transform: uppercase;
+    padding-left: 0%;
+    margin-left: 0rem;
+    animation: marquee-animation 20s linear infinite;
+}
+
+@keyframes marquee-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-800px, 0);
+    }
+}
+
+
+
+
+.about-head {
+    margin-top: 15rem;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #171717;
+}
+
+.about-head:nth-last-child(2) {
+    margin-top: 0rem;
+
+}
+
+.about-head h1 {
+    position: relative;
+    font-family: Moment;
+    text-transform: uppercase;
+    font-size: 6vmax;
+    color: #fff;
+    font-weight: 900;
+    width: max-content;
+    word-spacing: -24px;
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-head h1 svg {
+    rotate: 90deg;
+}
+
+
+
+.about-head p {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1vmax;
+    width: 530px;
+    color: #535353;
+    font-weight: 900;
+}
+
+@media (max-width:530px) {
+
+    .about-head h1 {
+        font-size: 12vw !important;
+        word-spacing: 0px;
+        gap: 0.1rem;
+    }
+}
+
+@media (max-width:1100px) {
+
+    .about-head h1 {
+        font-size: 7vmax;
+        word-spacing: 0px;
+        gap: 0.1rem;
+    }
+
+
+    .about-head {
+        justify-content: center;
+    }
+
+    .about-head p {
+        display: none;
+    }
+}
+
+
+.about-content {
+    margin-top: 5rem;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-inline: 120px;
+}
+
+
+
+@media (max-width:700px) {
+
+    .about-content {
+        gap: 0rem;
+        padding-inline: 0px !important;
+    }
+
+    .about-video {
+        height: 70vw !important;
+    }
+
+    .about-carrier {
+        height: 70vw !important;
+    }
+
+}
+
+
+
+.about-video {
+    height: 40vw;
+    width: 20rem;
+    flex-grow: 1;
+}
+
+.video-bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-bg video {
+    border-radius: 60px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.about-carrier {
+    width: 22rem;
+    height: 45vw;
+    flex-grow: 1;
+
+}
+
+
+/* about-team */
+.about-team {
+    background-color: #171717;
+    height: max-content;
+    width: 100%;
+}
+
+#card-team {
+    height: max-content;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#card-team .elem {
+    height: 40rem;
+    width: 20rem;
+    flex-grow: 1;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-team .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+#card-team .elem .dets {
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5ff3f;
+}
+
+#card-team .elem .dets button {
+    width: 200px;
+    text-transform: uppercase;
+    height: 30px;
+    overflow: hidden;
+    border: none;
+    color: #000;
+    font-family: Moment;
+    font-size: 2rem;
+    background: none;
+    position: relative;
+    padding-bottom: 1em;
+}
+
+#card-team .elem .dets button>div,
+#card-team .elem .dets button>svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#card-team .elem .dets button:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+}
+
+#card-team .elem .dets button:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#card-team .elem .dets button .clone>*,
+#card-team .elem .dets button .text>* {
+    opacity: 1;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    margin-left: 4px;
+}
+
+#card-team .elem .dets button .clone>* {
+    transform: translateY(60px);
+}
+
+#card-team .elem .dets button:hover .clone>* {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+#card-team .elem .dets button:hover .text>* {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+#card-team .elem .dets button:hover .clone> :nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+#card-team .elem .dets button:hover .clone> :nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+#card-team .elem .dets button:hover .clone> :nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+#card-team .elem .dets button:hover .clone> :nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+/* icon style and hover */
+#card-team .elem .dets button svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+}
+
+#card-team .elem .dets button:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+
+@media (max-width:600px) {
+
+
+    #card-team {
+        min-height: max-content;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+
+
+    #card-team .elem {
+        height: 25rem;
+        width: 22rem;
+    }
+
+}

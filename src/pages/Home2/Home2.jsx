@@ -4,6 +4,7 @@ import Card from '../../components/Card'
 import './Home2.css'
 import { useScroll } from 'framer-motion';
 import { projects } from '../../data';
+import { motion } from 'framer-motion'
 
 const Home2 = () => {
   const container = useRef(null);
@@ -16,7 +17,12 @@ const Home2 = () => {
   return (
     <div className='home2-main'>
       <div className="main-head">
-        <h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "backOut" }}
+          viewport={{ once: true }}
+        >
           Selected-Cases
           <svg
             width="80"
@@ -34,14 +40,20 @@ const Home2 = () => {
               style={{ fill: '#fff' }} // Set the color to white
             ></path>
           </svg>
-        </h1>
-        <p>Creative fuels design, design fuels creativity,be here for more,are you in love with creativity?</p>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "backOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >Creative fuels design, design fuels creativity,be here for more,are you in love with creativity?</motion.p>
       </div>
       <div ref={container} className="portfolios-main">
         {
           projects.map((project, i) => {
             const targetScale = 1 - ((projects.length - i) * 0.05);
-            return <Card key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale} />
+            return <Card
+              key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale} />
           })
         }
       </div>
