@@ -4,7 +4,7 @@ import Landing from './pages/Landing/Landing'
 import Lenis from '@studio-freight/lenis'
 import Footer from './components/Footer/Footer';
 import { Routes, Route, Link } from 'react-router-dom'
-import About from './pages/About/ABout';
+import About from './pages/About/About';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
