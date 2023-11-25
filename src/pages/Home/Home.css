@@ -160,8 +160,12 @@
         /* border: 1px solid red; */
     }
 
+    .circle-head {
+        margin-inline: auto;
+    }
 
     .header h1 {
+        text-align: center;
         font-size: 17vw;
         line-height: 1.4 !important;
     }
@@ -179,10 +183,16 @@
         align-items: center;
     }
 
-    .play-wrapper {
+    .team-picture {
+        position: relative;
+        width: 90vw !important;
+        height: 90vw !important;
+    }
+
+    /* .play-wrapper {
         width: 85vw !important;
         border-radius: 40px !important;
-    }
+    } */
 
     .copy p {
         text-align: center !important;
@@ -216,6 +226,12 @@
         justify-content: flex-end;
         align-items: flex-start;
     }
+
+    .arrow svg {
+        height: 30px !important;
+        animation: 4s ease-in alternate infinite !important;
+    }
+  
 
 }
 
@@ -350,6 +366,7 @@
     height: 100%;
     background: #d5ff3f;
 }
+
 .hero-wrapper-2 {
     position: absolute;
     width: 0;
@@ -378,13 +395,13 @@
     height: 80px;
     color: #d5ff3f;
     rotate: 165deg;
-    animation: updown 1.5s ease-in alternate infinite ;
+    animation: updown 1.5s ease-in alternate infinite;
 }
 
 
 
 @keyframes updown {
-    to{
+    to {
         transform: translate(-15px)
     }
 }
