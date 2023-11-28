@@ -24,7 +24,7 @@
     align-items: center;
     min-height: 80vh;
     width: 100%;
-    padding: 0 20px;
+    padding: 60px 50px 130px 50px;
     justify-content: center;
     flex-direction: column;
     background-image: url(https://i.pinimg.com/564x/76/9b/11/769b11b616355d8c9e9203194bfb331a.jpg);
@@ -32,6 +32,7 @@
     background-size: cover;
     background-position: center;
     
+
 }
 
 
@@ -41,6 +42,7 @@
     display: flex;
     align-items: center ;
     justify-content: center;
+    margin: 0 0 1rem 0;
 }
 
 .footer-head h1 {

@@ -9,6 +9,8 @@
   font-family: Moment;
 }
 
+
+
 body::-webkit-scrollbar {
   display: none;
   background-color: #000;
@@ -21,6 +23,7 @@ body::-webkit-scrollbar {
 .urban{
   font-family: 'Urbanist', sans-serif;
 }
+
 
 :root {
   --transparent-background: rgba(4, 4, 4, 0.899);
