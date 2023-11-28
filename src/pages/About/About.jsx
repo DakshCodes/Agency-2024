@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './About.css';
 import { motion } from 'framer-motion'
 import aboutvideo from '../../assets/about.mp4'
+import Daksh from '../../assets/Daksh.jpg'
 
 const About = () => {
     useEffect(() => {
@@ -99,7 +100,30 @@ const About = () => {
                         </video>
                     </div>
                 </div>
-                <div className="about-carrier"></div>
+                <div className="about-carrier">
+                    <div className="carrier-box">
+                        <div className="carrier-head">
+                            <h1>2</h1>
+                            <p>Years Of Experience</p>
+                        </div>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M19 9L14 14.1599C13.7429 14.4323 13.4329 14.6493 13.089 14.7976C12.7451 14.9459 12.3745 15.0225 12 15.0225C11.6255 15.0225 11.2549 14.9459 10.9109 14.7976C10.567 14.6493 10.2571 14.4323 10 14.1599L5 9" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /> </g></svg>
+                        <p>our client are companies,brands,and startups that keep the world going around they treat diseases,move parcels.</p>
+                    </div>
+                    <div className="carrier-box">
+                        <div className="carrier-head">
+                            <h1>11</h1>
+                            <p>Project Completed</p>
+                        </div>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M19 9L14 14.1599C13.7429 14.4323 13.4329 14.6493 13.089 14.7976C12.7451 14.9459 12.3745 15.0225 12 15.0225C11.6255 15.0225 11.2549 14.9459 10.9109 14.7976C10.567 14.6493 10.2571 14.4323 10 14.1599L5 9" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /> </g></svg>
+                    </div>
+                    <div className="carrier-box">
+                        <div className="carrier-head">
+                            <h1>4</h1>
+                            <p>Happy Customers</p>
+                        </div>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M19 9L14 14.1599C13.7429 14.4323 13.4329 14.6493 13.089 14.7976C12.7451 14.9459 12.3745 15.0225 12 15.0225C11.6255 15.0225 11.2549 14.9459 10.9109 14.7976C10.567 14.6493 10.2571 14.4323 10 14.1599L5 9" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /> </g></svg>
+                    </div>
+                </div>
             </div>
             <div className="about-team">
                 <div className="about-head">
@@ -146,7 +170,7 @@ const About = () => {
                         </div>
                     </div>
                     <div id="elem2" className="elem">
-                        <img src="https://i.pinimg.com/564x/76/37/70/76377009b1f388075cd9aba0796fbbc2.jpg" alt />
+                        <img src={Daksh} alt />
                         <div className="dets" >
                             <button>
                                 <div className="text">
