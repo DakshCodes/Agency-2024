@@ -18,7 +18,7 @@ const Home = () => {
             top: "30px",
             opacity: 0,
         })
-        gsap.set("h1", {
+        gsap.set(".item h1", {
             opacity: 0,
             y: 60,
         });
@@ -71,7 +71,7 @@ const Home = () => {
             }
         })
 
-        gsap.to("h1", 2, {
+        gsap.to(".item h1", 2, {
             y: 0,
             opacity: 1,
             ease: "power4.inOut",
