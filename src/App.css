@@ -56,7 +56,8 @@ body::-webkit-scrollbar {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
+  padding: 20px 0;
   /* Adjust max-width as needed */
   height: 80px;
   /* Adjust height as needed */
@@ -81,16 +82,17 @@ body::-webkit-scrollbar {
 .section-links {
   display: flex;
   justify-content: space-between;
-  flex: 4;
-  /* background-image: url(https://i.pinimg.com/736x/e3/fe/42/e3fe425aec922b07c26e8ef189997c88.jpg); */
-  background-image: url(https://i.pinimg.com/564x/8a/52/f6/8a52f64ef61d66cccf57a489f40b0225.jpg);
+  flex: 1;
+  /* background-image: url(https://i.pinimg.com/736x/e3/fe/42/e3fe425aec922b07c26e8ef189997c88.jpg) ; */
+  /* background-image: url(https://i.pinimg.com/564x/8a/52/f6/8a52f64ef61d66cccf57a489f40b0225.jpg); */
+  background: #202020;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   color: #fff;
   border-radius: 10px;
-  padding: .25rem;
-  gap: .25rem;
+  padding: 0.5rem;
+  gap: 1rem;
   z-index: 1;
   transition: .2s linear;
   overflow: hidden;
@@ -131,7 +133,8 @@ body::-webkit-scrollbar {
 
 .bottom-nav-link:hover {
   cursor: pointer;
-  background-color: #fff;
+  background-color: #d4ff3f;
   color: #000;
   font-weight: 900;
+  padding: 0 0.5rem;
 }
