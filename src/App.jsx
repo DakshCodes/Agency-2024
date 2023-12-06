@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import { Routes, Route, Link } from 'react-router-dom'
 import About from './pages/About/About';
 import PricingPage from './pages/Pricing/PricingPage';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
@@ -67,6 +68,8 @@ function App() {
         <Route path='/about' element={<About />} />
 
         <Route path='/pricing' element={<PricingPage />} />
+
+        <Route path='/contact' element={<Contact />} />
 
 
       </Routes>
