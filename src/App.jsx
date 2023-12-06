@@ -5,6 +5,7 @@ import Lenis from '@studio-freight/lenis'
 import Footer from './components/Footer/Footer';
 import { Routes, Route, Link } from 'react-router-dom'
 import About from './pages/About/About';
+import PricingPage from './pages/Pricing/PricingPage';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
@@ -52,9 +53,10 @@ function App() {
       {/* nav-2 */}
       <div className={`bottom-nav ${showBottomNav ? 'active' : ''}`}>
         <div className="section-links">
-          <div className="bottom-nav-link"><Link to={'/'}>Home</Link></div>
-          <div className="bottom-nav-link"><Link to={'/about'}>About</Link></div>
-          <div className="bottom-nav-link"><Link to={'/contact'}>Contact</Link></div>
+          <Link className="bottom-nav-link" to={'/'}><div>Home</div></Link>
+          <Link className="bottom-nav-link" to={'/about'}><div>About</div></Link>
+          <Link className="bottom-nav-link" to={'/pricing'}><div>Pricing</div></Link>
+          <Link className="bottom-nav-link" to={'/contact'}><div>Contact</div></Link>
         </div>
       </div>
 
@@ -63,6 +65,9 @@ function App() {
         <Route path='/' element={<Landing />} />
 
         <Route path='/about' element={<About />} />
+
+        <Route path='/pricing' element={<PricingPage />} />
+
 
       </Routes>
       <Footer />
