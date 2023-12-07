@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Faq from '../FAQ/Faq'
 import Featured from '../Featured/Featured'
 import Home from '../Home/Home'
 import Home2 from '../Home2/Home2'
@@ -19,7 +20,7 @@ const Landing = () => {
             <Services />
             <Pricing />
             <Testimonial />
-
+            <Faq />
         </>
     )
 }
