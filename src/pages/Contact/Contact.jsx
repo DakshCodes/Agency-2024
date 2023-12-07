@@ -34,6 +34,8 @@ const Contact = () => {
             // Additional logic if needed
         } catch (error) {
             console.error('Error sending data to the backend:', error);
+            throw new Error("Something is wrong")
+
         }
     };
 
