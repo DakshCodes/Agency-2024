@@ -1,6 +1,10 @@
 .contact-main {
     height: max-content;
-    width: 100%;
+    /* width: 100vw; */
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -8,10 +12,10 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: #1c1d1c;
-    /* border: 1px solid red;   */
-    padding: 0 50px;
+    /* border: 1px solid green;   */
+    padding: 50px 50px;
     padding-bottom: 40px;
     color: #fffdff;
 }
@@ -180,14 +184,14 @@
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .form-wrapper form textarea::placeholder {
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 

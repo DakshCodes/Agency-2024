@@ -7,6 +7,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import About from './pages/About/About';
 import PricingPage from './pages/Pricing/PricingPage';
 import Contact from './pages/Contact/Contact';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [showBottomNav, setShowBottomNav] = useState(false);
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <>
+      <Toaster/>
       {/* nav-1 */}
       <div className={`nav ${showBottomNav ? 'hide' : ''}`}>
         <Link to={'/'}>
