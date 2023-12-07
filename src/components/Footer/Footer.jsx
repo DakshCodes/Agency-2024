@@ -13,8 +13,10 @@ const Footer = () => {
                     </h1>
                 </div>
                 <div className="main-footer">
+
                     <div class="bg-[#fff] rounded-3xl mt-4 mx-auto container pb-28 py-10 xl:px-0 lg:p-0 sm:p-0">
                         <div class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-12 gap-10 ">
+
                             <div class="flex flex-col flex-shrink-0  sm:items-start  items-center ">
                                 <div class="footer-logo text-[#fff]">
                                     ValueXLabs
@@ -44,7 +46,7 @@ const Footer = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="sm:ml-0 ml-0  flex flex-col">
+                            <div class="sm:ml-0 ml-0 py-10  flex flex-col">
                                 <h2 class="text-base font-semibold leading-4 text-gray-800 dark:text-white">Company</h2>
                                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Home</a>
                                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Pricing</a>
@@ -53,15 +55,8 @@ const Footer = () => {
                                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Services</a>
                                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Testimonials</a>
                             </div>
-                            <div class="flex flex-col">
-                                <h2 class="text-base font-semibold leading-4 text-gray-800 dark:text-white">Support</h2>
-                                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Legal policy</a>
-                                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Status policy</a>
-                                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Privacy policy</a>
-                                <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-gray-500 text-base leading-4 mt-6 text-gray-800 dark:text-white cursor-pointer">Terms of service</a>
-                            </div>
-                            <div class="mt-10 lg:block hidden">
-                                <label class="text-xl font-medium leading-5 text-gray-800 dark:text-white">Get updates</label>
+                            <div class="mt-10 px-10 text-center lg:block hidden">
+                                <label class="text-xl text-center w-[max-content] font-medium leading-5 text-[#000]">Get updates</label>
                                 <div class="cursor-pointer flex items-center justify-between border border-gray-800 dark:border-white mt-4">
                                     <input type="text" class="text-base leading-4 p-4 w-full focus:outline-none text-gray-800 dark:text-white dark:placeholder-white dark:bg-gray-900 dark:border-white placeholder-gray-800" placeholder="Enter your email" />
                                     <button aria-label="send" class="mr-4 fill-current text-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">

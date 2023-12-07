@@ -92,8 +92,12 @@
 
 
 .about-head p {
-    font-family: 'Michroma', sans-serif;
-    font-size: 1vmax;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.1vmax;
     width: 530px;
     color: #535353;
     font-weight: 900;
@@ -106,6 +110,7 @@
         word-spacing: 0px;
         gap: 0.1rem;
     }
+
     .about-content {
         gap: 0rem !important;
         margin-bottom: 3rem !important;
@@ -233,13 +238,18 @@
     height: 3.2vmax;
 }
 
-.carrier-box > p{
+.carrier-box>p {
     font-size: 1.2vmax;
     font-weight: 100;
-    font-family: 'Michroma', sans-serif;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    text-transform: uppercase;
+    font-weight: 700;
     color: rgb(105, 98, 98);
     max-width: 500px;
-} 
+}
+
 /* about-team */
 .about-team {
     background-color: #000;
