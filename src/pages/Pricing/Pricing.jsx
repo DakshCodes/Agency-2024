@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const data = [
     {
-        headline: "Single Landing Page(with advanced animations)",
+        headline: "Single Landing Page(with advanced animations) + VXL-107",
         price: "699",
         para: "Introducing our Single Landing Page—a powerful online debut, crafted to showcase your key message or product with compelling design.",
         p1: "Clear and Compelling Messaging",
@@ -16,7 +16,7 @@ const data = [
         p5: "Mobile-Optimized Design"
     },
     {
-        headline: "Websit Improvment (Minor Changes)",
+        headline: "Websit Improvment (Minor Changes) + VXL-108",
         price: "299",
         para: "Boost your online presence with our Website Improvement , a refining user experience, optimizing performance, and addressing glitches for a polished site",
         p1: "Enhanced User Experience",
@@ -26,7 +26,7 @@ const data = [
         p5: "Efficient Functionality Tweaks"
     },
     {
-        headline: "Website Redesign (With micro animations)",
+        headline: "Website Redesign (With micro animations) + VXL-109",
         price: "999",
         para: "Revitalize your online presence with our Website Redesign , a transformative solution to elevate your website's visual appeal and functionality",
         p1: "Animated Visuals",
