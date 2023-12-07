@@ -13,6 +13,7 @@ function App() {
 
   useEffect(() => {
     const lenis = new Lenis();
+    let lastScrollTop = 0;
 
     function raf(time) {
       lenis.raf(time);
@@ -23,13 +24,16 @@ function App() {
 
     const handleScroll = () => {
       // Check scroll position to determine when to show/hide bottom nav
-      const scrolled = window.scrollY;
+      const currentScrollTop = window.scrollY;
 
-      if (scrolled > 100) {
-        setShowBottomNav(true); // Show bottom nav when scrolled more than 200px
+
+      if (currentScrollTop > lastScrollTop || currentScrollTop < 100) {
+        setShowBottomNav(false); // Hide bottom nav on scroll down
       } else {
-        setShowBottomNav(false); // Hide bottom nav when scrolled back to top
+        setShowBottomNav(true); // Show bottom nav on scroll up
       }
+
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -42,12 +46,14 @@ function App() {
   return (
     <>
       {/* nav-1 */}
-      <div className={`nav ${showBottomNav ? 'hide' : ''}`}>
+      <div className={`nav`}>
         <Link to={'/'}>
           <div className="nav-logo">ValueX</div>
         </Link>
         <div className="nav-links">
           <Link to={"/about"}>About us</Link>
+          <Link to={"/about"}>Pricing</Link>
+          <Link to={"/about"}>Portfolios</Link>
           <Link to={"/contact"}>Contact</Link>
         </div>
       </div>

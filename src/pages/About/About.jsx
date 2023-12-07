@@ -133,7 +133,7 @@ const About = () => {
                         transition={{ duration: 1, ease: "backOut" }}
                         viewport={{ once: true }}
                     >
-                        Bhai Log
+                        Great Minds
                         <svg
                             width="80"
                             height="50"
