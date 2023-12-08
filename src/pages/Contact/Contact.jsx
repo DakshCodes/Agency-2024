@@ -1,17 +1,89 @@
 import gsap from 'gsap';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Contact.css'
 import { motion } from 'framer-motion'
 import contact1 from '../../assets/conatact.svg'
+import toast from 'react-hot-toast';
+import { useLocation } from 'react-router';
+import { pricingData, selectedPricing } from '../../pricingData';
 
 
 const Contact = () => {
+
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const name = searchParams.get('name');
+    const code = searchParams.get('code');
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    // Function to send data to the backend
+    const sendDataToBackend = async (values) => {
+        try {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/sendMail`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Data sent successfully:', data);
+            // Additional logic if needed
+        } catch (error) {
+            console.error('Error sending data to the backend:', error);
+            throw new Error("Something is wrong")
+
+        }
+    };
+
+    // Event handler for the "Send Request" button
+    const handleSendRequest = async (event) => {
+        event.preventDefault(); // Prevents the form from submitting in the default way
+        // Use toast.promise with the sendDataToBackend function
+        const promise = toast.promise(
+            sendDataToBackend(formData),
+            {
+                loading: 'Hold on , Compiling your message into 0s and 1s... ',
+                success: 'Congrats! Your message just successfully completed its journey through the API of communication.',
+                error: "'Oh-no' ,Your message didn't quite make it. Mind giving it another shot",
+                duration: 4000,
+            },
+        );
+
+        try {
+            // Wait for the promise to resolve
+            await promise;
+        } catch (error) {
+            // The error will be caught by the promise, so this block may not be reached
+            console.error('Error handling promise:', error);
+        }
+        // console.log(formData)
+    };
+
+    // Event handler for form input changes
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    };
 
     useEffect(() => {
         gsap.set(".container img", {
             scale: 2,
         });
-      
+
 
 
 
@@ -90,22 +162,33 @@ const Contact = () => {
                 <div class="content-wrapper wrapper">
                     <header id='header'>
                         <div class="h2">
-                            <h2>Let us Help You!</h2>
+                            <h2>Let us Help You! {code}</h2>
                         </div>
                         <div className="form-wrapper">
                             <form action="">
                                 {/* dropdown */}
-                                <select className='select-project'>
-                                    <option className='select-item' value="0">Select car</option>
-                                    <option className='select-item' value="1">Landing-Page</option>
+                                <select name="project-type" onChange={handleInputChange} className='select-project'>
+                                    <option className="select-item" value="0">
+                                        Select project type
+                                    </option>
+                                    {pricingData.map((card,index) => (
+                                        <option key={index} className="select-item" value={card.name}>
+                                            {card.name}
+                                        </option>
+                                    ))}
+                                    {selectedPricing.map((card,index) => (
+                                        <option key={index} className="select-item" value={card.headline === name}>
+                                            {card.headline}
+                                        </option>
+                                    ))}
                                 </select>
-                                <input type="text" placeholder='name' />
-                                <input type="text" placeholder='email' />
-                                <textarea type="text" placeholder='project details' />
+                                <input onChange={handleInputChange} type="text" name="name" placeholder='name' />
+                                <input onChange={handleInputChange} type="text" name="email" placeholder='email' />
+                                <textarea onChange={handleInputChange} type="text" name="message" placeholder='project details' />
 
                                 {/* button */}
-                                <button class="m-auto     group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-[#fff] hover:before:[box-shadow:_20px_20px_20px_30px_#000] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-1 hover:before:right-1 hover:before:bottom-0 hover:before:blur hover:underline hover:underline-offset-4 origin-left  relative bg-neutral-800 h-16 w-[15rem] border text-left p-3 text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-[0] after:w-10 after:h-20 after:content['']  after:bg-rose-300 after:right-0 after:top-1 after:rounded-full after:blur-lg">
-                                   <span className='conatact-btn z-50  '>Send Request</span>
+                                <button onClick={handleSendRequest} class="m-auto group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-[#fff] hover:before:[box-shadow:_20px_20px_20px_30px_#000] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-1 hover:before:right-1 hover:before:bottom-0 hover:before:blur hover:underline hover:underline-offset-4 origin-left  relative bg-neutral-800 h-16 w-[15rem] border text-left p-3 text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-[#d4ff3f] before:rounded-full before:blur-lg  after:absolute after:z-[0] after:w-10 after:h-20 after:content['']  after:bg-[#d4ff3f] after:right-0 after:top-1 after:rounded-full after:blur-lg">
+                                    <span className='conatact-btn z-50'>Send Request</span>
                                 </button>
 
                             </form>

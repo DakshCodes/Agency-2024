@@ -4,6 +4,7 @@ import "./Services.css"
 
 import SingleServiceCard from './SingleServiceCard';
 import { motion } from 'framer-motion'
+import { serviceData } from './serviceData';
 const Services = () => {
   return (
     <main className=' lg:h-fit lg:pb-[20rem]  bg-[#000] py-16 my-20 '>
@@ -80,16 +81,20 @@ const Services = () => {
         </div>
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1,}}
+          whileInView={{ opacity: 1, }}
           transition={{ duration: 1, ease: "backOut" }}
           viewport={{ once: true }}
-          className='text-white  lg:absolute p-4 top-[25rem] md:top-[14rem] grid grid-cols-1 lg:grid-cols-3 gap-4  border-red-500'>
+          className='text-white  lg:absolute p-4 top-[25rem] md:top-[14rem] grid grid-cols-1 z-[500] lg:grid-cols-3 gap-4  border-red-500'>
 
-          <SingleServiceCard
-
-          />
-          <SingleServiceCard />
-          <SingleServiceCard />
+          {
+            serviceData.map((item, index) => {
+              return (
+                <>
+                  <SingleServiceCard items = {item} />
+                </>
+              )
+            })
+          }
         </motion.div>
       </div>
     </main>

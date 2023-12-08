@@ -4,9 +4,9 @@ import "../../App.css"
 import SingleCard from './SingleCard'
 import { motion } from 'framer-motion'
 
-const data = [
+const selectedPricing = [
     {
-        headline: "Single Landing Page(with advanced animations)",
+        headline: "Single Landing Page(with advanced animations) + VXL-107",
         price: "699",
         para: "Introducing our Single Landing Page—a powerful online debut, crafted to showcase your key message or product with compelling design.",
         p1: "Clear and Compelling Messaging",
@@ -16,7 +16,7 @@ const data = [
         p5: "Mobile-Optimized Design"
     },
     {
-        headline: "Websit Improvment (Minor Changes)",
+        headline: "Websit Improvment (Minor Changes) + VXL-108",
         price: "299",
         para: "Boost your online presence with our Website Improvement , a refining user experience, optimizing performance, and addressing glitches for a polished site",
         p1: "Enhanced User Experience",
@@ -26,7 +26,7 @@ const data = [
         p5: "Efficient Functionality Tweaks"
     },
     {
-        headline: "Website Redesign (With micro animations)",
+        headline: "Website Redesign (With micro animations) + VXL-109",
         price: "999",
         para: "Revitalize your online presence with our Website Redesign , a transformative solution to elevate your website's visual appeal and functionality",
         p1: "Animated Visuals",
@@ -71,9 +71,9 @@ const Pricing = () => {
                     {/* Card Component */}
                     <div className='grid grid-cols-1  border-red-500 w-full lg:grid-cols-3 gap-4'>
                         
-                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={data[0]} /></div>
-                        <div className='col-span-1'><SingleCard bg={"bg-[#202020]"} fg={"#fff"} items={data[1]} /></div>
-                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={data[2]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={selectedPricing[0]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#202020]"} fg={"#fff"} items={selectedPricing[1]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={selectedPricing[2]} /></div>
                     </div>
                 </div>
             </main>

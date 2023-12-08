@@ -13,8 +13,10 @@ const Footer = () => {
                     </h1>
                 </div>
                 <div className="main-footer">
-                    <div class="!bg-[#fff] rounded-3xl mt-4  w-[100vw]    py-10  xl:px-28 lg:px-12 sm:px-6 ">
-                        <div class="grid grid-cols-1 md:text-left text-center  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 md:gap-40 gap-20 ">
+
+                    <div class="bg-[#fff] rounded-3xl mt-4 mx-auto container pb-28 py-10 xl:px-0 lg:p-0 sm:p-0">
+                        <div class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-12 gap-10 ">
+
                             <div class="flex flex-col flex-shrink-0  sm:items-start  items-center ">
                                 <div class="footer-logo text-[#fff]">
                                     ValueXLabs
