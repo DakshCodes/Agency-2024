@@ -4,14 +4,21 @@ import './Contact.css'
 import { motion } from 'framer-motion'
 import contact1 from '../../assets/conatact.svg'
 import toast from 'react-hot-toast';
+import { useLocation } from 'react-router';
+import { pricingData, selectedPricing } from '../../pricingData';
 
 
 const Contact = () => {
 
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const name = searchParams.get('name');
+    const code = searchParams.get('code');
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
     });
 
     // Function to send data to the backend
@@ -155,14 +162,25 @@ const Contact = () => {
                 <div class="content-wrapper wrapper">
                     <header id='header'>
                         <div class="h2">
-                            <h2>Let us Help You!</h2>
+                            <h2>Let us Help You! {code}</h2>
                         </div>
                         <div className="form-wrapper">
                             <form action="">
                                 {/* dropdown */}
                                 <select name="project-type" onChange={handleInputChange} className='select-project'>
-                                    <option className='select-item' value="0">Select car</option>
-                                    <option className='select-item' value="Landing">Landing-Page</option>
+                                    <option className="select-item" value="0">
+                                        Select project type
+                                    </option>
+                                    {pricingData.map((card,index) => (
+                                        <option key={index} className="select-item" value={card.name}>
+                                            {card.name}
+                                        </option>
+                                    ))}
+                                    {selectedPricing.map((card,index) => (
+                                        <option key={index} className="select-item" value={card.headline === name}>
+                                            {card.headline}
+                                        </option>
+                                    ))}
                                 </select>
                                 <input onChange={handleInputChange} type="text" name="name" placeholder='name' />
                                 <input onChange={handleInputChange} type="text" name="email" placeholder='email' />
