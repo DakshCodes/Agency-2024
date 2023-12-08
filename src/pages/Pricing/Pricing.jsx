@@ -4,7 +4,7 @@ import "../../App.css"
 import SingleCard from './SingleCard'
 import { motion } from 'framer-motion'
 
-const data = [
+const selectedPricing = [
     {
         headline: "Single Landing Page(with advanced animations) + VXL-107",
         price: "699",
@@ -71,9 +71,9 @@ const Pricing = () => {
                     {/* Card Component */}
                     <div className='grid grid-cols-1  border-red-500 w-full lg:grid-cols-3 gap-4'>
                         
-                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={data[0]} /></div>
-                        <div className='col-span-1'><SingleCard bg={"bg-[#202020]"} fg={"#fff"} items={data[1]} /></div>
-                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={data[2]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={selectedPricing[0]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#202020]"} fg={"#fff"} items={selectedPricing[1]} /></div>
+                        <div className='col-span-1'><SingleCard bg={"bg-[#fff]"} fg={"#202020"} items={selectedPricing[2]} /></div>
                     </div>
                 </div>
             </main>

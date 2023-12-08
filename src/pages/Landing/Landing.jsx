@@ -14,13 +14,13 @@ const Landing = () => {
     }, [])
     return (
         <>
-            <Home />
-            <Home2 />
-            <Featured />
+            {/* <Home /> */}
+            {/* <Home2 /> */}
+            {/* <Featured /> */}
             <Services />
-            <Pricing />
-            <Testimonial />
-            <Faq />
+            {/* <Pricing /> */}
+            {/* <Testimonial /> */}
+            {/* <Faq /> */}
         </>
     )
 }
