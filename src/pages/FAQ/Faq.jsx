@@ -1,45 +1,75 @@
-import React from 'react'
-import './Faq.css'
-
-
+import React, { useState } from 'react';
+import './Faq.css';
 
 const Faq = () => {
-    return (
-        <div className='h-[max-content] w-full bg-[#fff]'>
-            <section className="!bg-[#fff] h-full w-full p-10">
-                <div className=" w-full px-6 py-20 mx-auto bg-[#fff]">
-                    <h1 className="text-2xl font-semibold text-center text-[#000] lg:text-4xl ">Frequently asked questions</h1>
-                    <div className="mt-12 space-y-8">
-                        <div className="border-2 border-gray-600 rounded-lg">
-                            <button className="flex items-center justify-between w-full p-8">
-                                <h1 className="font-semibold text-gray-700 ">How i can play for my appoinment ?</h1>
-                                <span className="text-gray-400 bg-gray-200 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <hr className="border-gray-600" />
-                            <p className="p-8 text-sm text-[#000] ">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eaque nobis, fugit odit omnis fugiat deleniti animi ab maxime cum laboriosam recusandae facere dolorum veniam quia pariatur obcaecati illo ducimus?
-                            </p>
-                        </div>
-                        <div className="border-2 border-gray-600 rounded-lg">
-                            <button className="flex items-center justify-between w-full p-8">
-                                <h1 className="font-semibold text-gray-700 ">Is the cost of the appoinment covered by private health insurance?</h1>
-                                <span className="text-white bg-blue-500 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  const [activeAccordion, setActiveAccordion] = useState(-1);
 
-        </div>
-    )
-}
+  const handleAccordionClick = (index) => {
+    setActiveAccordion(activeAccordion === index ? null : index);
+  };
 
-export default Faq
+  const faqData = [
+    {
+      question:
+        'How long does it take to build a website?',
+      answer:
+        'The timeline for website development depends on the complexity and scope of the project. Generally, it can range from a few weeks for a basic website to several months for a more intricate and customized solution.',
+    },
+    {
+      question:
+        'Can I add new products on my website myself?',
+      answer:
+        'Absolutely! We provide a user-friendly easy to follow tutorials that allows you to easily update and manage your website’s products and content, including text, images, and multimedia elements.',
+    },
+    {
+      question:
+        'Will my website be mobile-friendly?',
+      answer:
+        'Yes, all our websites are designed and developed to be fully responsive, ensuring they adapt seamlessly to different screen sizes and devices, providing an optimal user experience for mobile users.',
+    },
+    {
+      question:
+        'Can you assist with domain registration and hosting?',
+      answer:
+        'Yes, we offer domain registration services and can help you choose the right domain name for your business. We also provide hosting solutions to ensure your website is securely stored and accessible online.',
+    },
+    {
+      question:
+        'Can you help with ongoing website maintenance and updates?',
+      answer:
+        'Yes, we offer ongoing website maintenance and support services to ensure your website remains secure, up-to-date, and performing optimally. We can assist with regular updates, security patches, backups, and resolving any technical issues that may arise.',
+    },
+    {
+      question:
+        'What if I need additional features or functionality in the future?',
+      answer:
+        'Our websites are built to be scalable and expandable. If you require additional features or functionality in the future, we can discuss your needs and provide solutions to enhance your website’s capabilities, ensuring it evolves alongside your business.',
+    },
+    // Add more FAQ data objects here...
+  ];
+
+  return (
+    <div className="wrapper">
+      <h1 className='!w-full md:!w-[30vw]  m-auto'>Got questions?
+        Well, we've got answers</h1>
+      <div className='flex flex-col gap-8'>
+        {faqData.map((faq, index) => (
+          <div onClick={() => handleAccordionClick(index)} className="bg-[#fff] border-t-2 border-[#0000001A] border-b-2 relative  text-[#000] w-[80vw] m-auto  flex flex-col  px-5 py-6  select-none">
+            <div className="number">{index + 1}</div>
+            <div className="flex items-centert justify-between">
+              <div className="flex items-center justify-center space-x-8">
+                <div className="apple text-[16px]  select-none ">{faq.question}</div>
+              </div>
+              <svg  className='faq-svg' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10L12 15L17 10" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+            <div className={`pannel ${activeAccordion === index ? 'active' : ''}`} >
+              {faq.answer}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Faq;

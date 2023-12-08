@@ -1,0 +1,100 @@
+.wrapper {
+    max-width: 100%;
+    margin: auto;
+    height: max-content;
+    background-color: #fff;
+    margin-bottom: 100px;
+}
+
+.wrapper>p,
+.wrapper>h1 {
+    text-align: center;
+}
+
+.wrapper>h1 {
+    margin: auto;
+    font-family: Moment;
+    font-size: 2vmax;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    line-height: normal;
+    color: #000;
+    text-align: center;
+}
+
+.accordion {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 40px;
+    border: none;
+    outline: none;
+    align-items: center;
+    transition: 0.4s;
+    display: flex;
+    text-align: justify;
+    font-weight: 800;
+    gap: 10px;
+}
+
+
+.accordion:hover {
+    background-color: #fff
+}
+
+.pannel {
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: #000;
+    border-radius: 12px;
+    padding: 30px 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+}
+
+.pannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+}
+
+
+
+.wrapper svg{
+    height: 30px;
+}
+
+.pannel {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+    display: none;
+    height: max-content;
+}
+
+.pannel.active {
+    display: block;
+}
+
+
+.number{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    width: 30px;
+    background-color: #ff7c7c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: Moment;
+    font-weight: 100;
+    color: #fff;
+}
