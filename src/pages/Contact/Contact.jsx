@@ -162,7 +162,7 @@ const Contact = () => {
                 <div class="content-wrapper wrapper">
                     <header id='header'>
                         <div class="h2">
-                            <h2>Let us Help You! {code}</h2>
+                            <h2>Let us Help You! </h2>
                         </div>
                         <div className="form-wrapper">
                             <form action="">
@@ -173,12 +173,12 @@ const Contact = () => {
                                     </option>
                                     {pricingData.map((card,index) => (
                                         <option key={index} className="select-item" value={card.name}>
-                                            {card.name}
+                                            {card.name.split("+")[0]}
                                         </option>
                                     ))}
                                     {selectedPricing.map((card,index) => (
                                         <option key={index} className="select-item" value={card.headline === name}>
-                                            {card.headline}
+                                            {card.headline.split("+")[0]}
                                         </option>
                                     ))}
                                 </select>
