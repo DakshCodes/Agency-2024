@@ -62,16 +62,19 @@ body::-webkit-scrollbar {
   transform: translateX(-50%);
   width: 90%;
   max-width: 500px;
-  padding: 20px 0;
+  padding: 10px 0;
   /* Adjust max-width as needed */
   height: 80px;
   /* Adjust height as needed */
-  background-color: #fff;
+  background-color: #000;
+  background-image: url(https://i.pinimg.com/564x/8f/85/8b/8f858b1e9d5212e7d2c8b75a5723155d.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem;
+  padding: 0.7rem;
   border-radius: 10px;
-  gap: .25rem;
+  gap: 0rem;
   transition: .2s;
   transition: bottom 0.3s ease-in-out;
   will-change: width, height;
@@ -90,11 +93,13 @@ body::-webkit-scrollbar {
   flex: 1;
   /* background-image: url(https://i.pinimg.com/736x/e3/fe/42/e3fe425aec922b07c26e8ef189997c88.jpg) ; */
   /* background-image: url(https://i.pinimg.com/564x/8a/52/f6/8a52f64ef61d66cccf57a489f40b0225.jpg); */
-  background: #202020;
+  background: #000;
+  background: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  color: #fff;
+  color: #000;
+  /* color: #fff;  */
   border-radius: 10px;
   padding: 0.5rem;
   gap: 1rem;
@@ -118,7 +123,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex: 1;
-  font-size: 2.4vmin;
+  font-size: 2.2vmin;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
 }
 
@@ -131,15 +136,15 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex: 1;
-    font-size: 3.9vmin;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+    font-size: 3.3vmin;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   }
 }
 
 .bottom-nav-link:hover {
   cursor: pointer;
-  background-color: #d4ff3f;
+  /* background-color: #d4ff3f; */
   color: #000;
   font-weight: 900;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
 }

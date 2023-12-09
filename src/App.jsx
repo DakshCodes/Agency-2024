@@ -54,8 +54,8 @@ function App() {
         </Link>
         <div className="nav-links">
           <Link to={"/about"}>About us</Link>
-          <Link to={"/about"}>Pricing</Link>
-          <Link to={"/about"}>Portfolios</Link>
+          <Link to={"/pricing"}>Pricing</Link>
+          <Link to={"/"}>Portfolios</Link>
           <Link to={"/contact"}>Contact</Link>
         </div>
       </div>
