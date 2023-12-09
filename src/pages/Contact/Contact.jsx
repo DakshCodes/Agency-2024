@@ -15,6 +15,10 @@ const Contact = () => {
     const name = searchParams.get('name');
     const code = searchParams.get('code');
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',

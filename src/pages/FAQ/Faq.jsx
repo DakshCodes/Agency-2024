@@ -9,43 +9,43 @@ const Faq = () => {
   };
 
   const faqData = [
-    // {
-    //   question:
-    //     'How long does it take to build a website?',
-    //   answer:
-    //     'The timeline for website development depends on the complexity and scope of the project. Generally, it can range from a few weeks for a basic website to several months for a more intricate and customized solution.',
-    // },
-    // {
-    //   question:
-    //     'Can I add new products on my website myself?',
-    //   answer:
-    //     'Absolutely! We provide a user-friendly easy to follow tutorials that allows you to easily update and manage your website’s products and content, including text, images, and multimedia elements.',
-    // },
-    // {
-    //   question:
-    //     'Will my website be mobile-friendly?',
-    //   answer:
-    //     'Yes, all our websites are designed and developed to be fully responsive, ensuring they adapt seamlessly to different screen sizes and devices, providing an optimal user experience for mobile users.',
-    // },
-    // {
-    //   question:
-    //     'Can you assist with domain registration and hosting?',
-    //   answer:
-    //     'Yes, we offer domain registration services and can help you choose the right domain name for your business. We also provide hosting solutions to ensure your website is securely stored and accessible online.',
-    // },
-    // {
-    //   question:
-    //     'Can you help with ongoing website maintenance and updates?',
-    //   answer:
-    //     'Yes, we offer ongoing website maintenance and support services to ensure your website remains secure, up-to-date, and performing optimally. We can assist with regular updates, security patches, backups, and resolving any technical issues that may arise.',
-    // },
-    // {
-    //   question:
-    //     'What if I need additional features or functionality in the future?',
-    //   answer:
-    //     'Our websites are built to be scalable and expandable. If you require additional features or functionality in the future, we can discuss your needs and provide solutions to enhance your website’s capabilities, ensuring it evolves alongside your business.',
-    // },
-    // // Add more FAQ data objects here...
+    {
+      question:
+        'How long does it take to build a website?',
+      answer:
+        'The timeline for website development depends on the complexity and scope of the project. Generally, it can range from a few weeks for a basic website to several months for a more intricate and customized solution.',
+    },
+    {
+      question:
+        'Can I add new products on my website myself?',
+      answer:
+        'Absolutely! We provide a user-friendly easy to follow tutorials that allows you to easily update and manage your website’s products and content, including text, images, and multimedia elements.',
+    },
+    {
+      question:
+        'Will my website be mobile-friendly?',
+      answer:
+        'Yes, all our websites are designed and developed to be fully responsive, ensuring they adapt seamlessly to different screen sizes and devices, providing an optimal user experience for mobile users.',
+    },
+    {
+      question:
+        'Can you assist with domain registration and hosting?',
+      answer:
+        'Yes, we offer domain registration services and can help you choose the right domain name for your business. We also provide hosting solutions to ensure your website is securely stored and accessible online.',
+    },
+    {
+      question:
+        'Can you help with ongoing website maintenance and updates?',
+      answer:
+        'Yes, we offer ongoing website maintenance and support services to ensure your website remains secure, up-to-date, and performing optimally. We can assist with regular updates, security patches, backups, and resolving any technical issues that may arise.',
+    },
+    {
+      question:
+        'What if I need additional features or functionality in the future?',
+      answer:
+        'Our websites are built to be scalable and expandable. If you require additional features or functionality in the future, we can discuss your needs and provide solutions to enhance your website’s capabilities, ensuring it evolves alongside your business.',
+    },
+    // Add more FAQ data objects here...
   ];
 
   return (
