@@ -9,6 +9,10 @@ const PricingPage = () => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div className='border-red-500 min-h-screen mb-[5rem] max-h-fit'>
       <div className=' max-w-[1290px] mx-auto mt-6 px-4 lg:px-0 text- '>
@@ -51,7 +55,7 @@ const PricingPage = () => {
                         &#8377; {item.status ? "Requirement Based" : item.price}
                       </div>
                     </div>
-                    
+
                     <div className='text-sm moment'> <p className='text-gray-400 urban font-semibold mb-2 ml-1'>Code</p> <span className='bg-[#5f5f5f] px-2 py-1 rounded-full'>{item.code}</span></div>
                   </div>
 
@@ -60,7 +64,7 @@ const PricingPage = () => {
                   </div>
 
 
-                  <button onClick={()=>navigate(`/contact?name=${item.name}&code=${item.code}`)} className='text-lg hover:bg-transparent bg-[#d4ff3f] text-black hover:text-white hover:transition-all hover:duration-300 hover:ease-out font-semibold border-2 hover:border-dashed mt-5 border-[#d4ff3f] rounded-xl w-full h-[3rem] outline-none'>Contact me</button>
+                  <button onClick={() => navigate(`/contact?name=${item.name}&code=${item.code}`)} className='text-lg hover:bg-transparent bg-[#d4ff3f] text-black hover:text-white hover:transition-all hover:duration-300 hover:ease-out font-semibold border-2 hover:border-dashed mt-5 border-[#d4ff3f] rounded-xl w-full h-[3rem] outline-none'>Contact me</button>
 
 
                 </div>
