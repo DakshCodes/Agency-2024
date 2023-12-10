@@ -82,15 +82,15 @@ return (
 
           <div className='flex my-8 gap-4 flex-wrap items-center justify-evenly p-4'>
             <div className='flex flex-col items-center gap-2'>
-              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>0{countdown.days}</div>
+              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>{countdown.days}</div>
               <div className='michroma text-xs'>Days</div>
             </div>
             <div className='flex flex-col items-center gap-2'>
-              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>0{countdown.hours}</div>
+              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>{countdown.hours}</div>
               <div className='michroma text-xs'>Hours</div>
             </div>
             <div className='flex flex-col items-center gap-2'>
-              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>0{countdown.minutes}</div>
+              <div className=' h-[4rem] w-[4rem] bg-[#202020] rounded-md flex items-center justify-center'>{countdown.minutes}</div>
               <div className='michroma text-xs'>Minutes</div>
             </div>
             <div className='flex flex-col items-center gap-2'>
