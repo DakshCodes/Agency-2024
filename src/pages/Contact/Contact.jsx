@@ -15,15 +15,21 @@ const Contact = () => {
     const name = searchParams.get('name');
     const code = searchParams.get('code');
 
+    const [selectedProjectType, setSelectedProjectType] = useState('');
+
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+        // Set the initially selected project type when the component mounts
+        setSelectedProjectType(name || '');
+    }, [name]);
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
+        projectType : ''
     });
+
 
     // Function to send data to the backend
     const sendDataToBackend = async (values) => {
@@ -171,17 +177,17 @@ const Contact = () => {
                         <div className="form-wrapper">
                             <form action="">
                                 {/* dropdown */}
-                                <select name="project-type" onChange={handleInputChange} className='select-project'>
+                                <select value={formData.projectType} name="projectType" onChange={handleInputChange}  className='select-project'>
                                     <option className="select-item" value="0">
                                         Select project type
                                     </option>
-                                    {pricingData.map((card,index) => (
+                                    {pricingData.map((card, index) => (
                                         <option key={index} className="select-item" value={card.name}>
                                             {card.name.split("+")[0]}
                                         </option>
                                     ))}
-                                    {selectedPricing.map((card,index) => (
-                                        <option key={index} className="select-item" value={card.headline === name}>
+                                    {selectedPricing.map((card, index) => (
+                                        <option key={index} className="select-item" value={card.headline}>
                                             {card.headline.split("+")[0]}
                                         </option>
                                     ))}
