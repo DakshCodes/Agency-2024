@@ -5,9 +5,11 @@ import aboutvideo from '../../assets/about.mp4'
 import Daksh from '../../assets/Daksh.jpg'
 
 const About = () => {
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    
     return (
         <div className='main-about'>
             <motion.div
@@ -154,7 +156,7 @@ const About = () => {
                 </div>
                 <div id="card-team">
                     <div id="elem1" className="elem">
-                        <img src='https://i.pinimg.com/736x/49/7d/36/497d366b9d8f08b07bd5bb582ba4c35d.jpg' alt />
+                        <img src='' alt="soon" />
                         <div className="dets" >
                             <button>
                                 <div className="text">
@@ -186,9 +188,9 @@ const About = () => {
                         </div>
                     </div>
                     <div id="elem3" className="elem">
-                        <img src="https://i.pinimg.com/564x/6c/12/8d/6c128de2738cddc45db7cc5dac136a9b.jpg" alt />
+                        <img src="" alt="soon" />
                         <div className="dets" >
-                            <button>
+                            <button >
                                 <div className="text">
                                     <span>Arjun</span>
                                 </div>

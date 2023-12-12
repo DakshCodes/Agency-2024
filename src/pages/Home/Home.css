@@ -53,10 +53,13 @@
     position: relative;
 }
 
-.nav-logo {
-    font-size: 2rem;
-    cursor: pointer;
-    font-weight: 900;
+/* .nav-logo {
+
+} */
+
+.nav-logo img {
+ width: 240px;
+ user-select: none;
 }
 
 .nav .nav-links {
