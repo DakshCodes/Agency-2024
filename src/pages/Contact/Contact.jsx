@@ -34,7 +34,7 @@ const Contact = () => {
     // Function to send data to the backend
     const sendDataToBackend = async (values) => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}api/sendMail`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/sendMail`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
