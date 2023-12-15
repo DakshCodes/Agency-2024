@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import { FaArrowRight, FaCode } from "react-icons/fa"
+
 
 const SingleCard = ({ bg, fg, items }) => {
     // console.log(object)
@@ -57,7 +59,7 @@ const SingleCard = ({ bg, fg, items }) => {
                 {/* button */}
 
                 <div className='mt-10  w-full h-fit py-4 px-4 rounded-full text-center bg-[#d4ff3f] text-black font-bold'>
-                    <button>Click here to get started</button>
+                   <Link to='/contact'> <button>Click here to get started</button></Link>
                 </div>
             </div>
         </>
