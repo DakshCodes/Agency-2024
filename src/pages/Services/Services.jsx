@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../App.css";
 import "./Services.css"
-
+import { Link } from 'react-router-dom';
 import SingleServiceCard from './SingleServiceCard';
 import { motion } from 'framer-motion'
 import { serviceData } from './serviceData';
@@ -66,12 +66,12 @@ const Services = () => {
                 At ValueXLabs, we specialize in custom web development solutions for businesses and enterprises. Elevate your online presence with our tailored services. Experience innovation that goes beyond expectations. Here is how we can assist you
               </motion.p>
 
-              <motion.button
+              <Link to='/contact'>  <motion.button
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "backOut" }}
                 viewport={{ once: true }}
-                className='my-4 urban border-[1.8px] px-4 py-1  border-black w-[4rem] rounded-full min-w-fit h-fit'>Get Started</motion.button>
+                className='my-4 urban border-[1.8px] px-4 py-1  border-black w-[4rem] rounded-full min-w-fit h-fit'>Get Started</motion.button></Link>
             </div>
           </div>
 
